@@ -7,7 +7,7 @@ const GridLigths = () => {
     { id: 3, isBox: true, isChecked: false },
     { id: 4, isBox: true, isChecked: false }, 
     { id: 5, isBox: false, isChecked: false }, 
-    { id: 6, isBox: true, isChecked: false },
+    { id: 6, isBox: false, isChecked: false },
     { id: 7, isBox: true, isChecked: false }, 
     { id: 8, isBox: true, isChecked: false }, 
     { id: 9, isBox: true, isChecked: false }
@@ -25,7 +25,7 @@ const GridLigths = () => {
       newOrder = [...queue , id]
     }
     
-    if(newOrder.length === 8) setdeactivate(true)
+    if(newOrder.length === config.filter((curr)=> curr.isBox!==false).length) setdeactivate(true)
     setqueue(newOrder) 
 
   }
